@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroSync — Memory Journey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">N</span> NeuroSync</div>
+    <div class="patient-profile">
+      <div class="avatar">P</div>
+      <div><strong id="patientName">Patient</strong><small id="patientAge">Elderly Patient</small></div>
+    </div>
+  </header>
+
+  <main class="app">
+    <section id="welcomeScreen" class="card welcome">
+      <div class="welcome-icon">♥</div>
+      <h1>A Journey Through Happy Memories</h1>
+      <p>Let's take a gentle trip through some of your favorite moments.</p>
+      <div class="notice">You will be asked up to <strong>5 questions</strong>. There are no right or wrong answers.</div>
+      <div class="patient-form">
+        <label>Patient name <input id="nameInput" placeholder="Enter name"></label>
+        <label>Age <input id="ageInput" type="number" min="50" max="110" placeholder="Age"></label>
+      </div>
+      <button id="startBtn" class="primary">Begin Memory Journey</button>
+    </section>
+
+    <section id="gameScreen" class="card game hidden">
+      <div class="progress-row">
+        <span id="progressText">Question 1 of 5</span>
+        <span id="timer">0:00</span>
+      </div>
+      <div class="progress"><div id="progressBar"></div></div>
+
+      <div class="question-area">
+        <div class="speaker-row">
+          <span class="small-label">MEMORY QUESTION</span>
+          <button id="speakBtn" class="speak" aria-label="Read question aloud">🔊 Read Aloud</button>
+        </div>
+        <h2 id="questionText"></h2>
+        <p class="encourage">Take your time. When you are ready, tell us your memory.</p>
+
+        <div id="recordingState" class="recording hidden">
+          <span class="pulse"></span> Listening… speak naturally.
+        </div>
+        <div id="answerBox" class="answer-box">Your spoken answer will appear here…</div>
+
+        <div class="controls">
+          <button id="recordBtn" class="primary">🎙 Start Answering</button>
+          <button id="skipBtn" class="secondary">Skip Question</button>
+        </div>
+        <p id="speechHelp" class="help">Allow microphone access when your browser asks.</p>
+      </div>
+    </section>
+
+    <section id="reportScreen" class="card report hidden">
+      <div class="report-icon">✓</div>
+      <h1>Memory Journey Complete</h1>
+      <p class="report-sub">Thank you for sharing those memories.</p>
+
+      <div class="stats">
+        <div><strong id="answeredStat">0</strong><span>Answered</span></div>
+        <div><strong id="skippedStat">0</strong><span>Skipped</span></div>
+        <div><strong id="avgStat">0s</strong><span>Average answer time</span></div>
+        <div><strong id="nervousStat">Low</strong><span>Nervousness*</span></div>
+      </div>
+
+      <div class="report-note">
+        <strong>*Nervousness is an interaction estimate, not a medical diagnosis.</strong>
+        It is based on observable session signals such as unusually long pauses, repeated starts/stops,
+        and skipped questions. A clinician should interpret the results.
+      </div>
+
+      <div id="detailList" class="details"></div>
+      <button id="pdfBtn" class="primary">📄 Create PDF Report</button>
+      <button id="restartBtn" class="secondary">Start Another Session</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
