@@ -1,0 +1,444 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Dashboard</title>
+
+    <link rel="stylesheet" href="patient-dashoard.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">✦</div>
+            <h2>MindCare</h2>
+        </div>
+
+        <nav class="navigation">
+            <a href="#" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>🎮</span>
+                Games
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>💊</span>
+                Medication
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📅</span>
+                Appointments
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>📊</span>
+                Progress
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="nav-item">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="#" class="nav-item">
+                <span>↪</span>
+                Logout
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div>
+                <p class="greeting">Good morning 👋</p>
+                <h1>Welcome back, Robert</h1>
+                <p class="subtitle">
+                    Let's keep your mind and body healthy today.
+                </p>
+            </div>
+
+            <div class="profile">
+                <div class="notification">🔔</div>
+
+                <div class="profile-image">
+                    R
+                </div>
+
+                <div class="profile-info">
+                    <strong>Robert Wilson</strong>
+                    <span>Patient</span>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-grid">
+
+
+            <!-- Hydration Card -->
+            <div class="card hydration-card">
+
+                <div class="card-header">
+                    <div>
+                        <span class="card-label">TODAY'S WELLNESS</span>
+                        <h2>Hydration Haunt 💧</h2>
+                    </div>
+
+                    <div class="card-icon water-icon">
+                        💧
+                    </div>
+                </div>
+
+
+                <div class="hydration-content">
+
+                    <!-- Water Bottle -->
+                    <div class="water-bottle">
+
+                        <div class="water-fill">
+                            <div class="wave"></div>
+                        </div>
+
+                        <div class="bottle-mark mark-1">100%</div>
+                        <div class="bottle-mark mark-2">75%</div>
+                        <div class="bottle-mark mark-3">50%</div>
+                        <div class="bottle-mark mark-4">25%</div>
+
+                    </div>
+
+
+                    <div class="hydration-info">
+
+                        <p class="water-label">
+                            You've had
+                        </p>
+
+                        <div class="water-number">
+                            4 <span>/ 8 glasses</span>
+                        </div>
+
+                        <p class="water-remaining">
+                            4 glasses remaining today
+                        </p>
+
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                            <span>50%</span>
+
+                        </div>
+
+
+                        <button class="primary-button">
+                            + Add Water
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Medication Card -->
+            <div class="card medication-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="card-label">HEALTH</span>
+                        <h2>Medication 💊</h2>
+                    </div>
+
+                    <div class="card-icon medicine-icon">
+                        💊
+                    </div>
+
+                </div>
+
+
+                <!-- Medicine 1 -->
+                <div class="medicine-item">
+
+                    <div class="medicine-icon-box">
+                        💊
+                    </div>
+
+                    <div class="medicine-details">
+                        <strong>Donepezil</strong>
+                        <span>10 mg · After breakfast</span>
+                    </div>
+
+                    <div class="medicine-status taken">
+                        ✓ Taken
+                    </div>
+
+                </div>
+
+
+                <!-- Medicine 2 -->
+                <div class="medicine-item">
+
+                    <div class="medicine-icon-box">
+                        💊
+                    </div>
+
+                    <div class="medicine-details">
+                        <strong>Memantine</strong>
+                        <span>10 mg · After lunch</span>
+                    </div>
+
+                    <div class="medicine-status upcoming">
+                        1:00 PM
+                    </div>
+
+                </div>
+
+
+                <!-- Medicine 3 -->
+                <div class="medicine-item">
+
+                    <div class="medicine-icon-box">
+                        💊
+                    </div>
+
+                    <div class="medicine-details">
+                        <strong>Vitamin B12</strong>
+                        <span>500 mcg · Evening</span>
+                    </div>
+
+                    <div class="medicine-status upcoming">
+                        7:00 PM
+                    </div>
+
+                </div>
+
+
+                <!-- Appointment -->
+                <div class="appointment">
+
+                    <div class="appointment-icon">
+                        📅
+                    </div>
+
+                    <div class="appointment-info">
+                        <span>UPCOMING APPOINTMENT</span>
+                        <strong>Dr. Sarah Johnson</strong>
+                        <p>Tomorrow · 10:30 AM</p>
+                    </div>
+
+                    <button class="appointment-button">
+                        View
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Games Section -->
+        <section class="games-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="card-label">DAILY ACTIVITIES</span>
+                    <h2>Mind Games 🎮</h2>
+                    <p>
+                        Keep your memory active with today's activities.
+                    </p>
+                </div>
+
+                <a href="#" class="view-all">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="games-grid">
+
+
+                <!-- Memory Card Game -->
+                <div class="game-card memory-game">
+
+                    <div class="game-image">
+                        🧠
+                    </div>
+
+                    <div class="game-content">
+
+                        <span class="game-category">
+                            MEMORY
+                        </span>
+
+                        <h3>Memory Card Game</h3>
+
+                        <p>
+                            Match identical cards and exercise your short-term memory.
+                        </p>
+
+                        <div class="game-footer">
+
+                            <span class="difficulty">
+                                ⭐ Easy
+                            </span>
+
+                            <button class="play-button">
+                                Play →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Pattern Recall -->
+                <div class="game-card pattern-game">
+
+                    <div class="game-image">
+                        🧩
+                    </div>
+
+                    <div class="game-content">
+
+                        <span class="game-category">
+                            VISUAL MEMORY
+                        </span>
+
+                        <h3>Pattern Picture Recall</h3>
+
+                        <p>
+                            Look at a picture and remember the pattern shown.
+                        </p>
+
+                        <div class="game-footer">
+
+                            <span class="difficulty">
+                                ⭐⭐ Medium
+                            </span>
+
+                            <button class="play-button">
+                                Play →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Past Life Questions -->
+                <div class="game-card life-game">
+
+                    <div class="game-image">
+                        💭
+                    </div>
+
+                    <div class="game-content">
+
+                        <span class="game-category">
+                            PERSONAL MEMORY
+                        </span>
+
+                        <h3>Past Life Q&A</h3>
+
+                        <p>
+                            Answer meaningful questions about joyful moments from your past.
+                        </p>
+
+                        <div class="game-footer">
+
+                            <span class="difficulty">
+                                ⭐ Gentle
+                            </span>
+
+                            <button class="play-button">
+                                Start →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Daily Progress -->
+        <section class="bottom-section">
+
+            <div class="daily-message">
+
+                <div class="message-icon">
+                    🌱
+                </div>
+
+                <div>
+                    <strong>You're doing great!</strong>
+                    <p>
+                        You've completed 65% of today's activities.
+                        Keep going!
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="streak">
+                <span>🔥</span>
+                <div>
+                    <strong>7 Day Streak</strong>
+                    <small>Keep it going!</small>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+```
